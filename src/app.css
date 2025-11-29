@@ -1,0 +1,38 @@
+/* Global Styles */
+:root {
+    --primary-color: #3498db; /* Example primary color */
+    --secondary-color: #2ecc71; /* Example secondary color */
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --font-main: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Target main globally within the layout context if needed,
+   but often better to style the main element directly in layout */
+/* body > div > main { ... } */ /* Example of more specific global selector if needed */
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-color); /* Applied globally */
+}
+
+a {
+    color: var(--primary-color); /* Applied globally */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Applied globally */
+}
+
+/* Add more global styles as needed */

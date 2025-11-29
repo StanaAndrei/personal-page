@@ -1,0 +1,34 @@
+# Use a specific LTS Node.js version (e.g., 20)
+image: node:20
+
+# Cache node_modules to speed up builds
+cache:
+  key: ${CI_COMMIT_REF_SLUG} # Cache per branch
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp -r build/* public/
+    # Add an empty .nojekyll file to disable Jekyll processing on GitLab Pages
+    - touch public/.nojekyll
+  artifacts:
+    paths:
+      - public
+  only:
+    - main # Or your default branch name
