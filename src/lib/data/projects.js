@@ -154,7 +154,7 @@ export const projects = [
         slug: 'this',
         title: 'This Portfolio',
         description: 'My personal portfolio',
-        projectUrl: 'https://gitlab.com/StanaAndrei/portfolio',
+        projectUrl: 'https://github.com/StanaAndrei/personal-page',
         details: 'My personal portfolio. This website you are now on! A good example of recursion =))',
         tags: ['svelte kit', 'devops']
     },
