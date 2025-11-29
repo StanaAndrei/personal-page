@@ -1,4 +1,6 @@
 <script>
+    import { base } from '$app/paths'; // 1. Import base path
+
     // You can add JavaScript logic here if needed later
     // For example, animations on scroll, etc.
 </script>
@@ -6,7 +8,6 @@
 <svelte:head>
     <title>Stana Andrew | Portfolio</title>
     <meta name="description" content="Welcome to the personal portfolio of Stana Andrew." />
-    <!-- Google Fonts for a more extravagant look -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
@@ -14,7 +15,7 @@
     <div class="hero-glow"></div>
     <div class="hero-content">
         <div class="profile-pic-wrapper">
-            <img src='/pic.png' alt="Stana Andrew Profile Picture" class="profile-pic"/>
+            <img src="{base}/pic.png" alt="Stana Andrew Profile Picture" class="profile-pic"/>
             <div class="profile-pic-glow"></div>
         </div>
         <div class="hero-text">
@@ -36,12 +37,12 @@
     </p>
     <p>
         We can also connect online via
-        <a href="/links" class="links-link">links page</a>.
+        <a href="{base}/links" class="links-link">links page</a>.
     </p>
     <p style="">
         This site is like a journey which aggregates my professional experience.
         If you want to see a resume(most important part) of it go to the
-        <a href="/cv" class="links-link">CV page</a>.
+        <a href="{base}/cv" class="links-link">CV page</a>.
     </p>
 </section>
 

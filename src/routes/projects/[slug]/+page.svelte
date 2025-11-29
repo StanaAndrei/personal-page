@@ -1,14 +1,19 @@
 <script>
+    import { base } from '$app/paths'; // 1. Import base
+
     /** @type {import('./$types').PageData} */
     export let data; // Data loaded from +page.js
 
     const { project } = data;
+
+    // 2. Helper to handle links safely.
+    // If a link starts with '/', prepends the base path. Otherwise (https://), leaves it alone.
+    const getSafeLink = (url) => url.startsWith('/') ? `${base}${url}` : url;
 </script>
 
 <svelte:head>
     <title>{project.title} - Stana Andrew Portfolio</title>
     <meta name="description" content={project.description} />
-    <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
@@ -16,7 +21,7 @@
     <div class="project-glow"></div>
     {#if project.projectUrl}
         <h1>
-            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" class="title-link">
+            <a href={getSafeLink(project.projectUrl)} target="_blank" rel="noopener noreferrer" class="title-link">
                 <span class="gradient-text">{project.title}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
@@ -46,12 +51,13 @@
         {#if project.projectUrl}
             <div class="project-link-section">
                 <h2>Project Link</h2>
-                <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" class="button-link">
+                <a href={getSafeLink(project.projectUrl)} target="_blank" rel="noopener noreferrer" class="button-link">
                     Visit Project
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
             </div>
         {/if}
+
     </div>
 </article>
 
