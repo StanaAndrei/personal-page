@@ -1,4 +1,6 @@
 <script>
+    import { base } from '$app/paths'; // 1. Import base path
+
     // Expects a project object { slug, title, description, projectUrl?, tags? }
     export let project;
 </script>
@@ -26,7 +28,7 @@
             </div>
         {/if}
 
-        <a href={`/projects/${project.slug}`} class="details-link">View Details</a>
+        <a href="{base}/projects/{project.slug}" class="details-link">View Details</a>
     </div>
 </div>
 

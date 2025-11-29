@@ -1,5 +1,6 @@
 <script>
     import { browser } from '$app/environment';
+    import { base } from '$app/paths'; // 1. Import base path
 
     let isMenuOpen = false;
 
@@ -22,8 +23,6 @@
 
 <header>
     <nav>
-        <!-- <a href="/" class="brand-logo" on:click={closeMenu}>MyPortfolio</a> -->
-
         <button
                 class="hamburger"
                 on:click={toggleMenu}
@@ -37,15 +36,15 @@
         </button>
 
         <ul class="nav-links" class:show-mobile-menu={isMenuOpen} id="nav-links-list">
-            <li><a href="/" on:click={closeMenu}>Home</a></li>
-            <li><a href="/about" on:click={closeMenu}>About</a></li>
-            <li><a href="/projects" on:click={closeMenu}>Projects</a></li>
-            <li><a href="/awards" on:click={closeMenu}>Awards</a></li>
-            <li><a href="/stats" on:click={closeMenu}>Stats</a></li>
-            <li><a href="/experience" on:click={closeMenu}>Experience</a></li>
-            <li><a href="/contributions" on:click={closeMenu}>Contributions</a></li>
-            <li><a href="/cv" on:click={closeMenu}>CV</a></li>
-            <li><a href="/links" on:click={closeMenu}>Links</a></li>
+            <li><a href="{base}/" on:click={closeMenu}>Home</a></li>
+            <li><a href="{base}/about" on:click={closeMenu}>About</a></li>
+            <li><a href="{base}/projects" on:click={closeMenu}>Projects</a></li>
+            <li><a href="{base}/awards" on:click={closeMenu}>Awards</a></li>
+            <li><a href="{base}/stats" on:click={closeMenu}>Stats</a></li>
+            <li><a href="{base}/experience" on:click={closeMenu}>Experience</a></li>
+            <li><a href="{base}/contributions" on:click={closeMenu}>Contributions</a></li>
+            <li><a href="{base}/cv" on:click={closeMenu}>CV</a></li>
+            <li><a href="{base}/links" on:click={closeMenu}>Links</a></li>
         </ul>
     </nav>
 </header>
