@@ -1,25 +1,25 @@
-// svelte.config.js
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [vitePreprocess()],
+    preprocess: vitePreprocess(),
 
-	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			// Explicitly tell the adapter to create a file named 404.html
-			// It will still contain your main app shell content.
-			fallback: '404.html', // <-- CHANGE THIS LINE
-			precompress: false,
-			strict: true
-		}),
-		paths: {
-			base: '',
-		}
-	}
+    kit: {
+        adapter: adapter({
+            // default options are usually fine
+            pages: 'build',
+            assets: 'build',
+            fallback: '404.html',
+            precompress: false,
+            strict: true
+        }),
+        paths: {
+            // IF your repo is 'my-app', this should be '/my-app'
+            // IF this is a user site (username.github.io), leave this empty ''
+            base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+        }
+    }
 };
 
 export default config;
