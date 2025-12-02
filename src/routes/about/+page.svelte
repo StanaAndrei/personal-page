@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <svelte:head>
     <title>About Me - Stana Andrew Portfolio</title>
     <meta name="description" content="Learn more about my background and skills." />
@@ -12,7 +15,13 @@
         <span class="sparkle">👤</span>
     </h1>
     <p class="about-coming-soon">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        I am a curious analytic mind, very passionated about science and tech. <br />
+        I started programming after gymnasium when I entered at high school at math-informatics profile. <br />
+        In the mid of the high school I focused on competitive programming and data structs & algos, then
+        I started doing fullstack webdev and developing small web canvas games.
+        I am currently studying comp engineering and automatics at
+        <a href="https://www.upt.ro/Universitatea-Politehnica-Timisoara_en.html">UPT</a>.
+        and working at Intel. <br />
     </p>
 </section>
 
