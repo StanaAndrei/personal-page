@@ -14,13 +14,13 @@
         <span class="gradient-text">About Me</span>
         <span class="sparkle">👤</span>
     </h1>
-    <p class="about-coming-soon">
+    <p class="about-data">
         I am a curious analytic mind, very passionated about science and tech. <br />
         I started programming after gymnasium when I entered at high school at math-informatics profile. <br />
         In the mid of the high school I focused on competitive programming and data structs & algos, then
         I started doing fullstack webdev and developing small web canvas games.
         I am currently studying comp engineering and automatics at
-        <a href="https://www.upt.ro/Universitatea-Politehnica-Timisoara_en.html">UPT</a>.
+        <a href="https://www.upt.ro/Universitatea-Politehnica-Timisoara_en.html">UPT</a>
         and working at Intel. <br />
     </p>
 </section>
@@ -104,7 +104,7 @@
         100% { transform: scale(1.2) rotate(10deg);}
     }
 
-    .about-coming-soon {
+    .about-data {
         font-size: 1.3rem;
         color: #e0e0e0;
         background: rgba(0,0,0,0.18);
