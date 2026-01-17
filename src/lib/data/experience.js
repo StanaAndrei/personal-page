@@ -29,5 +29,14 @@ export const workExperience = [
             "We also had a hacking workshop where we exploited an older java logger exploit",
         ],
         technologies: ["MySQL", "Azure", "GoBetween", "Angular", "Spring", "Java", "Git"]
+    },
+    {
+        company: "GDSC Politehnica University of Timisoara",
+        title: "Devops",
+        startDate: "10 2022",
+        endDate: "3 2023",
+        location: "Timisoara, Romania",
+        description: [],
+        technologies: ["Docker"]
     }
 ];
