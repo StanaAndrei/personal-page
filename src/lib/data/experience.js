@@ -15,7 +15,7 @@ export const workExperience = [
             "Contributed to a Regression Control(RegCtrl) tool to track/analyze bugs for our silicon products.",
             "Created a CLI tool in python to assist other teams with github usage."
         ],
-        technologies: ["Python", "Tkinter", "C/C++", "RTEMS", "Google Test", "ML", "hardware architectures"]
+        technologies: ["Python", "C/C++", "RTEMS", "Google Test", "ML", "hardware architectures"]
     },
     {
         company: "ACI Worldwide",
