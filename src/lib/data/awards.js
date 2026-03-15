@@ -40,8 +40,8 @@ export const awards = [
         date: 2022
     },
     {
-        title: "Aurel Vlaicu Programming Contest",
-        description: "1st prize",
+        title: "Aurel Vlaicu Info & Math Contest",
+        description: "1st prize at data structs & algorithms probe, mention at math probe",
         date: 2022
     },
     {
