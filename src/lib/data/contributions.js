@@ -2,6 +2,14 @@
 
 export const contributions = [
     {
+        project: 'MooMoo Cow',
+        link: '',
+        description: [
+            'A unity mobile game inspired by cow TikTok filter with more sensors and persistent storage.'
+        ],
+        technologies: ["Unity"]
+    },
+    {
         project: 'Smart Door System',
         link: 'https://gitlab.com/StanaAndrei/si',
         description: [
