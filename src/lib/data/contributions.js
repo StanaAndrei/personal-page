@@ -2,6 +2,16 @@
 
 export const contributions = [
     {
+        project: 'Relax ES',
+        link: 'https://github.com/damianulios-bit/expert-system-project',
+        description: [
+            "An expert system which uses forward chaining to recommend a recreative activity(like movies/walks/games/music etc).",
+            'Based on a formular in a desktop app which the user has to complete.',
+            'The decision is taken using a backward chaining alogrithm.'
+        ],
+        technologies: ["Python", "Pytholog", 'Tkinter', 'Prolog']
+    }, 
+    {
         project: 'MooMoo Cow',
         link: '',
         description: [
