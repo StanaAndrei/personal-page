@@ -39,10 +39,8 @@
         We can also connect online via
         <a href="{base}/links" class="links-link">links page</a>.
     </p>
-    <p style="">
+    <p>
         This site is like a journey which aggregates my professional experience.
-        If you want to see a resume(most important part) of it go to the
-        <a href="{base}/cv" class="links-link">CV page</a>.
     </p>
 </section>
 

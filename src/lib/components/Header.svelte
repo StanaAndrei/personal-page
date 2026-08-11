@@ -43,7 +43,6 @@
             <li><a href="{base}/stats" on:click={closeMenu}>Stats</a></li>
             <li><a href="{base}/experience" on:click={closeMenu}>Experience</a></li>
             <li><a href="{base}/contributions" on:click={closeMenu}>Contributions</a></li>
-            <li><a href="{base}/cv" on:click={closeMenu}>CV</a></li>
             <li><a href="{base}/links" on:click={closeMenu}>Links</a></li>
         </ul>
     </nav>
