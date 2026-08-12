@@ -1,8 +1,8 @@
 <script>
-    import { awards } from '$lib/data/awards.js';
+    export let data;
 
     // Sort awards by date, descending (most recent first).
-    const sortedAwards = [...awards].sort((a, b) => {
+    $: sortedAwards = [...data.awards].sort((a, b) => {
         const dateA = a.date ?? -Infinity;
         const dateB = b.date ?? -Infinity;
         return dateB - dateA;

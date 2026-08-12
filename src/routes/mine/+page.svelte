@@ -1,29 +1,15 @@
-<script>
-    import ProjectCard from '$lib/components/ProjectCard.svelte';
-    
-    export let data;
-    $: projects = data.projects;
-</script>
-
 <svelte:head>
-    <title>Projects - Stana Andrew Portfolio</title>
-    <meta name="description" content="Browse through my collection of projects." />
+    <title>Mine - Stana Andrew Portfolio</title>
+    <meta name="description" content="Mine page." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
-<section class="projects-section glass">
-    <div class="projects-glow"></div>
+<section class="mine-section glass">
+    <div class="mine-glow"></div>
     <h1>
-        <span class="gradient-text">My Projects</span>
-        <span class="sparkle">🚀</span>
+        <span class="gradient-text">Mine</span>
     </h1>
-    <p class="subtitle">Here's a selection of work I've done.</p>
-    <div class="project-grid">
-        {#each projects as project (project.slug)}
-            <ProjectCard {project} />
-        {/each}
-    </div>
 </section>
 
 <style>
@@ -37,9 +23,9 @@
         overflow-x: hidden;
     }
 
-    .projects-section {
+    .mine-section {
         position: relative;
-        max-width: 1200px;
+        max-width: 800px;
         margin: 4rem auto 3rem auto;
         padding: 3.5rem 2rem 3rem 2rem;
         border-radius: 24px;
@@ -50,15 +36,16 @@
         border: 1.5px solid rgba(255,255,255,0.18);
         z-index: 1;
         overflow: hidden;
+        text-align: center;
     }
 
-    .projects-glow {
+    .mine-glow {
         position: absolute;
         top: -80px;
         left: 50%;
         transform: translateX(-50%);
-        width: 700px;
-        height: 320px;
+        width: 600px;
+        height: 300px;
         background: radial-gradient(circle, #00c3ff55 0%, #ffff1c22 60%, transparent 100%);
         filter: blur(60px);
         z-index: 0;
@@ -70,7 +57,7 @@
         font-size: 2.8rem;
         font-weight: 900;
         letter-spacing: 2px;
-        margin-bottom: 0.5rem;
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -94,52 +81,12 @@
         100% { background-position: 100% 50%; }
     }
 
-    .sparkle {
-        font-size: 2rem;
-        animation: sparkle 1.5s infinite alternate;
-        filter: drop-shadow(0 0 8px #ffff1c);
-    }
-
-    @keyframes sparkle {
-        0% { transform: scale(1) rotate(-10deg);}
-        100% { transform: scale(1.2) rotate(10deg);}
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-        color: #e0e0e0;
-        background: rgba(0,0,0,0.18);
-        border-radius: 12px;
-        padding: 0.7rem 1.2rem;
-        box-shadow: 0 2px 12px 0 #00c3ff22;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        margin-bottom: 2.5rem;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-top: 1.5rem;
-        z-index: 2;
-        position: relative;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-        .projects-section {
+    @media (max-width: 600px) {
+        .mine-section {
             padding: 2rem 0.5rem 2rem 0.5rem;
         }
         h1 {
             font-size: 2rem;
-        }
-        .project-grid {
-            gap: 1.2rem;
         }
     }
 </style>

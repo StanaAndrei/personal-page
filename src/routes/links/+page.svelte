@@ -1,5 +1,6 @@
 <script>
-    import links from '$lib/data/links.js';
+    export let data;
+    $: links = data.links;
 </script>
 
 <svelte:head>

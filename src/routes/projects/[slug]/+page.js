@@ -1,9 +1,9 @@
 import { error } from '@sveltejs/kit';
-import { getProjectBySlug } from '$lib/data/projects.js';
+import projects from '$lib/data/projects.json';
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
-    const project = getProjectBySlug(params.slug);
+    const project = projects.find(p => p.slug === params.slug);
 
     if (!project) {
         throw error(404, 'Project not found');

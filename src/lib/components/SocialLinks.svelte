@@ -1,5 +1,5 @@
 <script>
-    import links from '$lib/data/links.js'; // Each link: { name, url, icon }
+    import links from '$lib/data/links.json'; // Each link: { name, url, icon }
 </script>
 
 <!-- Font Awesome CDN (add once in your root layout if not already present) -->

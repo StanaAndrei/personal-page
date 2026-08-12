@@ -1,13 +1,12 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
 
+    export let data;
+
     // --- Configuration ---
-    const birthDateString = '2003-06-23T09:15:00';
-    const birthPlace = 'Arad, Romania';
-    const knownLanguages = [
-        'Romanian (Native)', 'English (Fluent)', 'German (Very basic)',
-        '*I can also imitate the moldavian, magyar and oltenian(historically known as "Lesser Wallachian") accents'
-    ];
+    const birthDateString = data.stats.birthDateString;
+    const birthPlace = data.stats.birthPlace;
+    const knownLanguages = data.stats.knownLanguages;
 
     // --- State ---
     let birthDateFormat = 'ce'; // 'ce' or 'unix'

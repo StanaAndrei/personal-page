@@ -1,7 +1,8 @@
 <!-- src/routes/contributions/+page.svelte -->
 
 <script>
-    import { contributions } from '$lib/data/contributions.js';
+    export let data;
+    $: contributions = data.contributions;
 </script>
 
 <svelte:head>

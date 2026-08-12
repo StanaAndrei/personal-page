@@ -1,5 +1,5 @@
 <script>
-    import { workExperience } from '$lib/data/experience.js';
+    export let data;
 
     function parseMonthYear(dateString) {
         if (!dateString) return null;
@@ -30,7 +30,7 @@
         }
     }
 
-    const processedExperience = workExperience
+    $: processedExperience = data.workExperience
         .map(job => ({
             ...job,
             startDateObj: parseMonthYear(job.startDate),

@@ -1,4 +1,5 @@
 <script>
+    export let data;
 </script>
 
 <svelte:head>
@@ -15,13 +16,7 @@
         <span class="sparkle">👤</span>
     </h1>
     <p class="about-data">
-        I am a curious analytic mind, very passionated about science and tech. <br />
-        I started programming after gymnasium when I entered at high school at math-informatics profile. <br />
-        In the mid of the high school I focused on competitive programming and data structs & algos, then
-        I started doing fullstack webdev and developing small web canvas games.
-        I am currently studying comp engineering and automatics at
-        <a href="https://www.upt.ro/Universitatea-Politehnica-Timisoara_en.html">UPT</a>
-        and working at Intel. <br />
+        {@html data.about.content}
     </p>
 </section>
 
