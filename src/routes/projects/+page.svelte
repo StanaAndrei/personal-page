@@ -1,12 +1,13 @@
 <script>
     import ProjectCard from '$lib/components/ProjectCard.svelte';
+    import home from '$lib/data/home.json';
     
     export let data;
     $: projects = data.projects;
 </script>
 
 <svelte:head>
-    <title>Projects - Stana Andrew Portfolio</title>
+    <title>Projects | {home.name}</title>
     <meta name="description" content="Browse through my collection of projects." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">

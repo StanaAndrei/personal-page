@@ -1,9 +1,10 @@
 <script>
+    import home from '$lib/data/home.json';
     export let data;
 </script>
 
 <svelte:head>
-    <title>About Me - Stana Andrew Portfolio</title>
+    <title>About Me | {home.name}</title>
     <meta name="description" content="Learn more about my background and skills." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">

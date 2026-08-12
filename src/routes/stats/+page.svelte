@@ -1,5 +1,6 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
+    import home from '$lib/data/home.json';
 
     export let data;
 
@@ -85,7 +86,7 @@
 </script>
 
 <svelte:head>
-    <title>Stats | Stana Andrew</title>
+    <title>Stats | {home.name}</title>
     <meta name="description" content="Personal statistics including age, birth date, and languages." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">

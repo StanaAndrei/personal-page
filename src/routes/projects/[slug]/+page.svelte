@@ -1,5 +1,6 @@
 <script>
     import { base } from '$app/paths'; // 1. Import base
+    import home from '$lib/data/home.json';
 
     /** @type {import('./$types').PageData} */
     export let data; // Data loaded from +page.js
@@ -12,7 +13,7 @@
 </script>
 
 <svelte:head>
-    <title>{project.title} - Stana Andrew Portfolio</title>
+    <title>{project.title} | {home.name}</title>
     <meta name="description" content={project.description} />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>

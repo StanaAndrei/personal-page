@@ -1,13 +1,14 @@
 <script>
     import { base } from '$app/paths'; // 1. Import base path
+    import home from '$lib/data/home.json';
 
     // You can add JavaScript logic here if needed later
     // For example, animations on scroll, etc.
 </script>
 
 <svelte:head>
-    <title>Stana Andrew | Portfolio</title>
-    <meta name="description" content="Welcome to the personal portfolio of Stana Andrew." />
+    <title>Home | {home.name}</title>
+    <meta name="description" content="Welcome to the personal portfolio of {home.name}." />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
@@ -15,12 +16,12 @@
     <div class="hero-glow"></div>
     <div class="hero-content">
         <div class="profile-pic-wrapper">
-            <img src="{base}/pic.png" alt="Stana Andrew Profile Picture" class="profile-pic"/>
+            <img src="{base}/pic.png" alt="{home.name} Profile Picture" class="profile-pic"/>
             <div class="profile-pic-glow"></div>
         </div>
         <div class="hero-text">
             <h1>
-                <span class="gradient-text">Stana Andrew</span>
+                <span class="gradient-text">{home.name}</span>
                 <span class="sparkle">✨</span>
             </h1>
             <p class="subtitle">Showcasing my projects, skills, and experience.</p>
@@ -33,7 +34,7 @@
     <p>Feel free to explore my work.</p>
     <p>
         You can contact me at
-        <a href="mailto:stana.andrei.2003@gmail.com" class="contact-link">stana.andrei.2003@gmail.com</a>.
+        <a href="mailto:{home.email}" class="contact-link">{home.email}</a>.
     </p>
     <p>
         We can also connect online via

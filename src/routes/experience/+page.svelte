@@ -1,4 +1,5 @@
 <script>
+    import home from '$lib/data/home.json';
     export let data;
 
     function parseMonthYear(dateString) {
@@ -48,7 +49,7 @@
 </script>
 
 <svelte:head>
-    <title>Work Experience | Stana Andrew</title>
+    <title>Work Experience | {home.name}</title>
     <meta name="description" content="Overview of professional work experience." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">

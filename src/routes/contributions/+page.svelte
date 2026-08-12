@@ -1,12 +1,13 @@
 <!-- src/routes/contributions/+page.svelte -->
 
 <script>
+    import home from '$lib/data/home.json';
     export let data;
     $: contributions = data.contributions;
 </script>
 
 <svelte:head>
-    <title>Contributions | Stana Andrew</title>
+    <title>Contributions | {home.name}</title>
     <meta name="description" content="Overview of open source and project contributions." />
     <!-- Google Fonts for consistency -->
     <link

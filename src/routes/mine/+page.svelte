@@ -1,5 +1,48 @@
+<script>
+    import JSZip from 'jszip';
+    import awards from '$lib/data/awards.json';
+    import contributions from '$lib/data/contributions.json';
+    import experience from '$lib/data/experience.json';
+    import links from '$lib/data/links.json';
+    import projects from '$lib/data/projects.json';
+    import stats from '$lib/data/stats.json';
+    import about from '$lib/data/about.json';
+    import home from '$lib/data/home.json';
+
+    let isZipping = false;
+
+    async function downloadData() {
+        isZipping = true;
+        try {
+            const zip = new JSZip();
+            zip.file('awards.json', JSON.stringify(awards, null, 2));
+            zip.file('contributions.json', JSON.stringify(contributions, null, 2));
+            zip.file('experience.json', JSON.stringify(experience, null, 2));
+            zip.file('links.json', JSON.stringify(links, null, 2));
+            zip.file('projects.json', JSON.stringify(projects, null, 2));
+            zip.file('stats.json', JSON.stringify(stats, null, 2));
+            zip.file('about.json', JSON.stringify(about, null, 2));
+
+            const content = await zip.generateAsync({ type: 'blob' });
+            const url = URL.createObjectURL(content);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'portfolio_data.zip';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error("Failed to generate zip", error);
+            alert("Failed to download data.");
+        } finally {
+            isZipping = false;
+        }
+    }
+</script>
+
 <svelte:head>
-    <title>Mine - Stana Andrew Portfolio</title>
+    <title>Mine | {home.name}</title>
     <meta name="description" content="Mine page." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -10,6 +53,12 @@
     <h1>
         <span class="gradient-text">Mine</span>
     </h1>
+    
+    <div class="actions">
+        <button on:click={downloadData} class="download-btn" disabled={isZipping}>
+            {isZipping ? 'Zipping...' : 'Download Data (.zip)'}
+        </button>
+    </div>
 </section>
 
 <style>
@@ -79,6 +128,37 @@
     @keyframes gradientMove {
         0% { background-position: 0% 50%; }
         100% { background-position: 100% 50%; }
+    }
+
+    .actions {
+        margin-top: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .download-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+        font-family: 'Montserrat', 'Roboto', sans-serif;
+        background: linear-gradient(90deg, #00c3ff 0%, #ffff1c 100%);
+        color: #222;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 195, 255, 0.4);
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+        outline: none;
+    }
+
+    .download-btn:hover:not(:disabled) {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 255, 28, 0.5);
+    }
+
+    .download-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
     }
 
     @media (max-width: 600px) {

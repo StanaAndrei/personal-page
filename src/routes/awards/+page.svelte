@@ -1,4 +1,5 @@
 <script>
+    import home from '$lib/data/home.json';
     export let data;
 
     // Sort awards by date, descending (most recent first).
@@ -10,7 +11,7 @@
 </script>
 
 <svelte:head>
-    <title>Awards & Recognition | Stana Andrew</title>
+    <title>Awards & Recognition | {home.name}</title>
     <meta name="description" content="A list of awards and recognitions received." />
     <!-- Google Fonts for consistency -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
