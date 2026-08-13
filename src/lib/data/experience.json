@@ -12,7 +12,7 @@
       "The used components were: a raspberry pi, arduino, camera, piezo sensors, lcd display, steppers and a semaphore like pcb with 3 leds.",
       "We designed a mobile app with a backend where the user signs in, register his/her cars and can reserve a spot with points acquired in the app via payment. The app keeps track of available spots and manages access in the parking spot.",
       "For the core algorithm, the computer vision task: a photo is taken once the car triggers a sensor, it is pre-processed and a lite inference algorithm runs directly on the board to extract the plate number, which then is passed to a validator and corrector for romanian plates and then sent to the server which finds the associated user.",
-      "The rpi acts as the brains and the arduino is used for interfacing directly with sensors, actuators and displays."
+      "The RaspberryPI acts as the brains and the arduino is used for interfacing directly with sensors, actuators and displays."
     ],
     "technologies": [
       "MariaDB",
