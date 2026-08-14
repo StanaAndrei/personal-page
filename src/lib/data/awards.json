@@ -1,6 +1,11 @@
 [
   {
-    "title": "Itec Ai Dev",
+    "title": "Exceptional bachelor's thesis",
+    "description": "My license project <<SlideScannerPDL1: A Web-Integrated Digital Pathology Platform for Compartment-Specific PD-L1 Quantification>> is a platform made for OncoHelp and in collab with UMFT to help in quantification and scoring of PD-L1 protein in tumor w/ T cells bindings for the possibility of targeted treatment in case of non-small cellular lung cancer. The project was graded with 10/10 and was awarded as exceptional.",
+    "date": 2026
+  },
+  {
+    "title": "Itec AI Dev",
     "description": "3rd prize. Developed an app that uses deep learning to predict real time glucose lvl(based on data which IRL comes from special sensors, but it was emulated in real time using a server and statistics). Then used a convex optimization library to minimize a mathematical function, which models the needed dose of insulin based on glucose. It also contains a ML algorithm to predict probability of diabetes",
     "date": 2025
   },
