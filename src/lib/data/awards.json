@@ -1,7 +1,7 @@
 [
   {
     "title": "Exceptional bachelor's thesis",
-    "description": "My license project <<SlideScannerPDL1: A Web-Integrated Digital Pathology Platform for Compartment-Specific PD-L1 Quantification>> is a platform made for OncoHelp and in collab with UMFT to help in quantification and scoring of PD-L1 protein in tumor w/ T cells bindings for the possibility of targeted treatment in case of non-small cellular lung cancer. The project was graded with 10/10 and was awarded as exceptional.",
+    "description": "Architected an integrated digital pathology system for automated PD-L1 biomarker quantification in non-small cell lung cancer (NSCLC), built for OncoHelp and UMFT. Pioneered a multi-compartment segmentation and scoring pipeline spanning the tumor core, invasive margin, and stroma—a three-zone spatial analysis absent in existing theoretical and clinical frameworks. Defended with a maximum grade of 10/10 and awarded exceptional distinction.",
     "date": 2026
   },
   {
