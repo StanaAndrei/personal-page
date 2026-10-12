@@ -1,5 +1,26 @@
 [
   {
+    "company": "Intel",
+    "title": "Intern SWE AI Dev",
+    "startDate": "10 2023",
+    "endDate": "09 2026",
+    "location": "Timisoara, Romania",
+    "description": [
+      "Part of the sys debug team which works on the firmware that allows a VPU(which will be part of the new generation of Intel's processors) to function and communicate with other software.",
+      "Created from scratch a jira CLI bot called PABLO. It's role is to provide support to various teams in jira. It has various features for sorting/grouping/repairing tickets based on defined params and shortcuts for JIRA CRUD ops. It also uses a nlp model for analysis and feedback. PABLO was integrated in RegCtrl project.",
+      "Contributed to a Regression Control(RegCtrl) tool to track/analyze bugs for our silicon products.",
+      "Created a CLI tool in python to assist other teams with github usage."
+    ],
+    "technologies": [
+      "Python",
+      "C/C++",
+      "RTEMS",
+      "Google Test",
+      "ML",
+      "hardware architectures"
+    ]
+  },
+  {
     "company": "Magna Electronics International",
     "title": "League AC Embedded Trainee",
     "startDate": "4 2026",
@@ -22,26 +43,6 @@
       "Arduino",
       "RaspberryPI",
       "Docker"
-    ]
-  },
-  {
-    "company": "Intel",
-    "title": "Intern SWE AI Dev",
-    "startDate": "10 2023",
-    "location": "Timisoara, Romania",
-    "description": [
-      "I'm now a part of the sys debug team which works on the firmware that allows a VPU(which will be part of the new generation of Intel's processors) to function and communicate with other software.",
-      "Created from scratch a jira CLI bot called PABLO. It's role is to provide support to various teams in jira. It has various features for sorting/grouping/repairing tickets based on defined params and shortcuts for JIRA CRUD ops. It also uses a nlp model for analysis and feedback. PABLO was integrated in RegCtrl project.",
-      "Contributed to a Regression Control(RegCtrl) tool to track/analyze bugs for our silicon products.",
-      "Created a CLI tool in python to assist other teams with github usage."
-    ],
-    "technologies": [
-      "Python",
-      "C/C++",
-      "RTEMS",
-      "Google Test",
-      "ML",
-      "hardware architectures"
     ]
   },
   {
