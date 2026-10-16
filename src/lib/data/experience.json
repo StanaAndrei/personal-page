@@ -21,6 +21,21 @@
     ]
   },
   {
+    "company": "DevDelta",
+    "title": "Co-Founder and SWE",
+    "startDate": "12 2023",
+    "endDate": "03 2026",
+    "location": "Timisoara, Romania",
+    "description": [
+      "Worked at a company founded by me and a college mate. I took care of the technical side of things.",
+      "We did b2b and b2c and also tried to publish some personal software products(this was the initial purpose), but failed due to marketing related issues.",
+      "Because of business and time related reasons we decided to close it."
+    ],
+    "technologies": [
+      "Docker", "NodeJS", "React", "Ionic", "Python", "FastAPI", "n8n"
+    ]
+  },
+  {
     "company": "Magna Electronics International",
     "title": "League AC Embedded Trainee",
     "startDate": "4 2026",
